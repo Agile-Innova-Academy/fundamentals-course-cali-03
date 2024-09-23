@@ -49,7 +49,7 @@ Las variables en Sass se compilan al valor real, no en variables CSS. Aquí tene
         $primary-color: #FB10F2;
         $accent-color: #5B93FF;
         $text-color: #FDB234;
-        $heading-color: #4CFF8C;
+        $heading-color: #4CF58C;
 
         body{
             background: $primary-color;

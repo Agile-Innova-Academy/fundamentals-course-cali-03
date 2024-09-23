@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardPokemon {
+  width: 200px;
+  margin: 1rem;
+  padding: 10px;
+  background-color: rgb(249, 249, 151);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.cardPokemon img {
+  width: 100%;
+}
+
+.pokeInfo {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.pokeInfo h2 {
+  margin-top: 0;
+}
+.pokeInfo span {
+  font-weight: bold;
+}
+.pokeInfo span .base {
+  color: red;
+}
+
+.overview {
+  background-color: rgb(229, 246, 155);
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translate(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.cardPokemon:hover .overview {
+  transform: translate(0);
+}
+
+/*# sourceMappingURL=stylesPokemon.css.map */

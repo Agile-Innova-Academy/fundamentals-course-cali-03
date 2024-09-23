@@ -1,0 +1,76 @@
+// variables
+$font-color: #2c2424;
+$primary-color: #0a3e53;
+$secondary-color: rgb(158, 160, 217);
+$other-color: rgb(217, 217, 236);
+$font-all: fantasy;
+
+body {
+  background-color: $other-color;
+  font: $font-all;
+  color: $font-color;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+//anidar
+
+nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    a {
+      color: $primary-color;
+      & hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+//Mixins
+//bloques de códigos reutilizables
+@mixin border-radius($radiusValue) {
+  border-radius: $radiusValue;
+  border: solid 3px $secondary-color;
+}
+
+button {
+    @include border-radius(30px);
+    text-align: center;
+    display: inline-block;
+    background-color: yellow
+}
+
+// #btnP {
+//        @include border-radius(10px);
+//        color: $primary-color;
+//        padding: 10px;
+
+// }
+
+// Herencia
+
+%button-base {
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  color: red
+}
+
+#btnP {
+@extend %button-base;
+background-color: $primary-color;
+}
+
+.btnS {
+@extend %button-base;
+background-color: $other-color
+}

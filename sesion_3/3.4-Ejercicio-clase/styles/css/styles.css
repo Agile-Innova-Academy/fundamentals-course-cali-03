@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(217, 217, 236);
+  font: fantasy;
+  color: #2c2424;
+}
+
+h1 {
+  color: #0a3e53;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav li a {
+  color: #0a3e53;
+}
+nav li a hover {
+  color: rgb(158, 160, 217);
+}
+
+button {
+  border-radius: 30px;
+  border: solid 3px rgb(158, 160, 217);
+  text-align: center;
+  display: inline-block;
+  background-color: yellow;
+}
+
+.btnS, #btnP {
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  color: red;
+}
+
+#btnP {
+  background-color: #0a3e53;
+}
+
+.btnS {
+  background-color: rgb(217, 217, 236);
+}
+
+/*# sourceMappingURL=styles.css.map */
