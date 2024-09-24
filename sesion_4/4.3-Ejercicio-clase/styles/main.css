@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+#heroesForm{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 25px;
+    padding: 10px;
+    background-color: rgb(241, 232, 220);
+    border-radius: 15px;
+}
+#listHeroes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
