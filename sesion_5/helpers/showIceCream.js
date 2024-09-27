@@ -1,10 +1,12 @@
-import { paletasURL } from "./constants.js";
+import { paletasURL, usuariosURL } from "./constants.js";
+import { getData } from "./getData.js";
 import { patchData } from "./patchData.js";
+const userID = JSON.parse(sessionStorage.getItem('currentUser')).id;
 
-export const showIceCream = (containers, datos) => {
+export const showIceCream = (containers, paletas) => {
   containers.innerHTML = "";
 
-  datos.forEach((element) => {
+  paletas.forEach((element) => {
     const divPaleta = document.createElement("div");
 
     divPaleta.innerHTML = `
@@ -58,8 +60,23 @@ export const showIceCream = (containers, datos) => {
 
     // Funcionalidad Añadir a favoritos
     const btnFavorites = divPaleta.querySelector(".btn-favorites");
-    btnFavorites.addEventListener("click", (e) => {
-      console.log(e.target.id);
+    btnFavorites.addEventListener("click", async (e) => {
+      const userInfo = await getData(`${usuariosURL}/${userID}`)
+      const userFavorites = userInfo.favorites
+
+      const paleta = paletas.find(paleta => paleta.id === e.target.id)
+
+      const paletaExiste = userFavorites.find(paletaFavorita => paletaFavorita.id === paleta.id)
+
+      if (!paletaExiste) {
+        userFavorites.push(paleta)
+        const favoritos = {
+          favorites: userFavorites
+        }
+        patchData(usuariosURL, userID, favoritos)      
+      } else {
+        alert("La paleta ya está en tus favoritos")
+      }
     });
 
     // Funcionalidad Eliminar
@@ -73,7 +90,7 @@ export const showIceCream = (containers, datos) => {
     const btnEdit = divPaleta.querySelector(".btn-edit");
     btnEdit.addEventListener("click", ({ target }) => {
       console.log(target);
-      const iceCreamToEdit = datos.find((paleta) => paleta.id == target.id)
+      const iceCreamToEdit = paletas.find((paleta) => paleta.id == target.id)
       console.log(iceCreamToEdit)
 
       // asignarle a lops input del formulario los valores de element

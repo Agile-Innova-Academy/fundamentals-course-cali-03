@@ -34,7 +34,18 @@
       "image": "https://sunny.pe/wp-content/uploads/2020/03/Helado-Vainilla.png",
       "flavor": "Lima",
       "description": "Esta gran paleta, galardonada como una de las mejores paletas de frutas de la ciudad, con su gran sabor y textura, deleitará tu paladar hasta saciarte a ti y toda tu familia de la mano de un momento único y especial.",
-      "categorie": "fruta"
+      "categorie": "fruta",
+      "favorites": [
+        {
+          "id": "14",
+          "name": "LimaManía",
+          "price": 5000,
+          "image": "https://sunny.pe/wp-content/uploads/2020/03/Helado-Vainilla.png",
+          "flavor": "Lima",
+          "description": "Esta gran paleta, galardonada como una de las mejores paletas de frutas de la ciudad, con su gran sabor y textura, deleitará tu paladar hasta saciarte a ti y toda tu familia de la mano de un momento único y especial.",
+          "categorie": "fruta"
+        }
+      ]
     },
     {
       "id": "15",
@@ -262,6 +273,32 @@
       "nombre": "Valentina",
       "email": "valen@gmail.com",
       "password": "geek123"
+    },
+    {
+      "id": "ed6f48c9-b251-431e-a094-9839cd592f9e",
+      "nombre": "Miguel Meñaca",
+      "email": "miguel@gmail.com",
+      "password": "geek123",
+      "favorites": [
+        {
+          "id": "13",
+          "name": "UvaManía",
+          "price": 5000,
+          "image": "https://heladosbon.com/wp-content/uploads/2019/06/uva.png",
+          "flavor": "Uva",
+          "description": "Esta gran paleta, galardonada como una de las mejores paletas de frutas de la ciudad, con su gran sabor y textura, deleitará tu paladar hasta saciarte a ti y toda tu familia de la mano de un momento único y especial.",
+          "categorie": "fruta"
+        },
+        {
+          "id": "12",
+          "name": "MangoManía",
+          "price": 5000,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRBnsFfoEpTH3tGtd37OVrsbJ4IkUGBVN1lDpKN_UA8-upkOkJ4KmpZnOyHiniqjNAprE&usqp=CAU",
+          "flavor": "Mango",
+          "description": "Esta gran paleta, galardonada como una de las mejores paletas de frutas de la ciudad, con su gran sabor y textura, deleitará tu paladar hasta saciarte a ti y toda tu familia de la mano de un momento único y especial.",
+          "categorie": "fruta"
+        }
+      ]
     }
   ]
 }

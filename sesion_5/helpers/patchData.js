@@ -3,7 +3,7 @@ export const patchData = async (url, id, obj) => {
   .then(
     (response) => {
       if (response && response.status === 200) {
-        if (url === "http://localhost:3002/paletas") {
+        if (url === "http://localhost:3000/paletas") {
           alert("Paleta actualizada exitosamente");
         } else {
           alert("Usuario actualizado exitosamente");

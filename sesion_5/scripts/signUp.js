@@ -15,6 +15,7 @@ form.addEventListener('submit', async (e) => {
     nombre,
     email,
     password,
+    favorites: []
   }
 
   const users = await getData(usuariosURL)
